@@ -3,12 +3,13 @@ return {
 
   plugins = {
     "AstroNvim/community",
-    { import = "astrocommunity.motion.leap-nvim" },
     { import = "astrocommunity.editing-support.auto-save-nvim" },
+    { import = "astrocommunity.motion.leap-nvim" },
     -- to explore next
     -- { import = "astrocommunity.split-and-window.windows-nvim" },
 
-    -- language packs
+    -- language packs (sorted alphabetically)
+    { import = "astrocommunity.pack.cpp" },
     { import = "astrocommunity.pack.docker" },
     { import = "astrocommunity.pack.json" },
     { import = "astrocommunity.pack.lua" },
@@ -29,5 +30,22 @@ return {
     { "rose-pine/neovim", name = "rose-pine", opts = {} },
     { "folke/tokyonight.nvim" },
     { "sainnhe/everforest" },
+
+    -- Custom Plugins
+    -- Elixir
+    {
+      "elixir-tools/elixir-tools.nvim",
+      version = "*",
+      event = { "BufReadPre", "BufNewFile" },
+      config = function()
+        local elixir = require "elixir"
+        -- local elixirls = require "elixir.elixirls"
+
+        elixir.setup {}
+      end,
+      dependencies = {
+        "nvim-lua/plenary.nvim",
+      },
+    },
   },
 }
