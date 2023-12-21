@@ -5,6 +5,7 @@ return {
     "AstroNvim/community",
     { import = "astrocommunity.editing-support.auto-save-nvim" },
     { import = "astrocommunity.motion.leap-nvim" },
+    { import = "astrocommunity.motion.nvim-surround" },
     -- to explore next
     -- { import = "astrocommunity.split-and-window.windows-nvim" },
 
