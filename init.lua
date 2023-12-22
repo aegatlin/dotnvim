@@ -1,4 +1,12 @@
 return {
+  lsp = {
+    formatting = {
+      -- AstroNvim has format-on-save enabled by default
+      -- which is undesirable. Disable it globally.
+      format_on_save = false,
+    },
+  },
+
   colorscheme = "everforest",
 
   plugins = {
