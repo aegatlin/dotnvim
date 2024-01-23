@@ -7,7 +7,7 @@ return {
     },
   },
 
-  colorscheme = "everforest",
+  colorscheme = "tokyonight",
 
   plugins = {
     "AstroNvim/community",
